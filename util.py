@@ -119,7 +119,7 @@ def save_image(resp, image_file):
 def parse_json(s):
     begin = s.find('{')
     end = s.rfind('}') + 1
-    return json.loads(s[begin:end])
+    return json.loads('{}' if s[begin:end] == '' else s[begin:end])
 
 
 def get_tag_value(tag, key='', index=0):
