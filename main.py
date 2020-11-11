@@ -13,10 +13,10 @@ if __name__ == '__main__':
     asst = Assistant()  # 初始化
     asst.login_by_QRcode()  # 扫码登陆
     # asst.clear_cart() # 清空购物车（可选）
-    # asst.add_item_to_cart(sku_ids=sku_ids)  # 根据商品id添加购物车（可选）
+    # asst.add_item_to_cart(sku_ids='100016117840')  # 根据商品id添加购物车（可选）
     # asst.submit_order_by_time(buy_time='2020-11-10 20:59:59.700', retry=4, interval= 0.5) #普通订单可用
-    asst.exec_seckill_by_time(sku_ids =sku_ids,buy_time='2020-11-10 23:59:59.700', retry=5, interval= 0.5)  # 定时提交秒杀订单
-    # asst.exec_reserve_seckill_by_time(sku_id ='100005855314',buy_time='2020-11-10 21:59:59.700', retry=4, interval= 0.5) #该秒杀会放入购物车
+    # asst.exec_seckill_by_time(sku_ids =sku_ids,buy_time='2020-11-10 23:59:59.700', retry=5, interval= 0.5)  # 定时提交秒杀订单
+    asst.exec_reserve_seckill_by_time(sku_id ='100016117840',buy_time='2020-11-11 07:59:59.975', retry=4, interval= 0.2) #该秒杀会放入购物车
     # asst.buy_item_in_stock(sku_ids=sku_ids, area=area, wait_all=False, stock_interval=5)  # 根据商品是否有货自动下单
     # 6个参数：
     # sku_ids: 商品id。可以设置多个商品，也可以带数量，如：'1234' 或 '1234,5678' 或 '1234:2' 或 '1234:2,5678:3'

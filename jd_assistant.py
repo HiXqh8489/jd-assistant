@@ -1362,6 +1362,7 @@ class Assistant(object):
 
         for count in range(1, retry + 1):
             logger.info('第[%s/%s]次尝试提交订单', count, retry)
+            self.get_checkout_page_detail()
             if self.submit_order():
                 break
             logger.info('休息%ss', interval)
